@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ApiMessageService from "./ApiMessageService.js";
+import ApiMessageService from "../../services/ApiMessageService.js";
 
 import moment from "moment";
 
