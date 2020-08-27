@@ -35,6 +35,11 @@ class MessageDashboard extends Component {
     });
   }
 
+  addMessageClicked() {
+    // redirecting
+    this.props.history.push("/newMessageForm");
+  }
+
   updateMessageClicked(id) {
     // redirecting
     console.log(id);
@@ -87,9 +92,9 @@ class MessageDashboard extends Component {
               ))}
             </tbody>
           </table>
-          <div className="row">
+          <div>
             <button
-              className="btn btn-success"
+              className="btn btn-primary "
               onClick={() => this.addMessageClicked()}
             >
               Create Message
