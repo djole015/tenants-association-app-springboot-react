@@ -17,6 +17,7 @@ class AddMessage extends Component {
   }
 
   saveMessage(message) {
+    console.log(this.state);
     ApiMessageService.addMessage(message)
       .then((res) => {
         this.props.history.push("/messages");

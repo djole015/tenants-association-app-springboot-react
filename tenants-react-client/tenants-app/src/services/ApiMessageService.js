@@ -3,8 +3,8 @@ import Axios from "axios";
 const MESSAGES_API_URL = "http://localhost:8080/api/messages";
 
 class ApiMessageService {
-  getAllMessages() {
-    return Axios.get(MESSAGES_API_URL);
+  getAllMessages(config) {
+    return Axios.get(MESSAGES_API_URL, config);
   }
 
   getMessageById(messageId) {

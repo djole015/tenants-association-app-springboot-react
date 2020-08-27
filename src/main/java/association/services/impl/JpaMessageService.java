@@ -51,6 +51,13 @@ public class JpaMessageService implements MessageService {
 
 	@Override
 	public Page<Message> search(String title, String type, Long flatId, int pageNum) {
+		if (title != null) {
+			title = "%" + title + "%";
+		}
+
+		if (type != null) {
+			type = "%" + type + "%";
+		}
 		return messageRepository.search(title, type, flatId, PageRequest.of(pageNum, 5));
 	}
 
